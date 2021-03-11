@@ -1,4 +1,4 @@
-all: build
+all: run
 	
 build:
 	echo "Building..."
