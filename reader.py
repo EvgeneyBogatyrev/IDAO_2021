@@ -3,7 +3,7 @@ import cv2
 
 class Reader:
     def __init__(self, path, test=False):
-        # path - путь к директории, test - тестовые или триноровочные данные
+        # path - путь к директории, test - тестовые или тренировочные данные
         self.path = path
         self.test = test
         
