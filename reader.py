@@ -44,10 +44,10 @@ class Reader:
         index += len(string)
 
         if name[index] == 'H':
-            part_type = 0
+            part_type = 1
             index += 6
         else:
-            part_type = 1
+            part_type = 0
             index += 3
 
         end = index
