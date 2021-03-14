@@ -35,7 +35,7 @@ class Reader:
         part_type = None
         energy = None
         
-        symbols = ['.', '-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        symbols = ['.', '-', 'e', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
         index = 0
         while name[index] in symbols:
             index += 1
@@ -57,3 +57,6 @@ class Reader:
         energy = ''.join(name[index : end])
         energy = int(energy)
         return part_type, energy
+
+    def __bool__(self):
+        return not (self.count >= self.limit)

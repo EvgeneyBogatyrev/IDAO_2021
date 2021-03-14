@@ -26,6 +26,7 @@ for i in range(sample_size):
     
     image = blur(image)
     image = remove_back(image)
+    image = remove_pixels(image)
 
     axs[1].imshow(image, cmap="gray")
  
