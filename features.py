@@ -13,7 +13,7 @@ def get_features(image):
 
 
 def nonzero_pixels(image):
-    return len(image[image > 0].flatten())
+    return len(image[image > 0].flatten()) / len(image.flatten())
 
 
 def mean_brightness(image):
@@ -21,6 +21,9 @@ def mean_brightness(image):
 
 
 def center_of_mass(image):
+    image_center_x = image.shape[0] / 2
+    image_center_y = image.shape[1] / 2
+
     center_x, center_y, amount = 0, 0, 0
 
     for x in range(len(image)):
@@ -36,4 +39,4 @@ def center_of_mass(image):
     center_x /= amount
     center_y /= amount
 
-    return center_x, center_y 
+    return abs(center_x - image_center_x), abs(center_y - image_center_y) 
